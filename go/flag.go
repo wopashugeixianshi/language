@@ -9,10 +9,12 @@ import (
 func main() {
 	var delay time.Duration
 	var delay1 int64
-	flag.DurationVar(&delay, "container-event-delay", 4*time.Second, "container event delay")
+	//flag.DurationVar(&delay, "container-event-delay", 4*time.Second, "container event delay")
+	flag.DurationVar(&delay, "container-event-delay", 4, "container event delay")
 	flag.Int64Var(&delay1, "container-event-delay1", 60, "container event delay1")
 	flag.Parse()
 
+	fmt.Println(delay*time.Minute, delay1)
 	fmt.Println("-------visit----------")
 	flag.Visit(func(f *flag.Flag) {
 		fmt.Println(f.Name, f.Value)

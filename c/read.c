@@ -19,6 +19,7 @@ int main(int argc, char**argv)
 		memset(str1, 0, sizeof(str1));
 		memset(str2, 0, sizeof(str2));
 		memset(str3, 0, sizeof(str3));
+		sleep(5);
 	}
 	fclose(fp);
 	return 0;
